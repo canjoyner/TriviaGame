@@ -13,7 +13,7 @@ var incorrect = 0;
 
 
 // timer variables
-var time = 10;
+var time = 20;
 var interval;
 
 
@@ -47,13 +47,19 @@ $("#start").on ("click", function() {
 
 
 
-$(".choice1").on("click", function() {    
+$(".choice1").on("click", function() {  
+
+  //the game is not recording "guess" so it is not able to keep score
+  //there should also be an onclick function that changes the color of the buttons to indicate which one the user has selected. 
       	var guess = $(this).val();
-      	console.log(guess)  	
+      	 	
     		if (question1[5] === guess){
       			correct++;}
       		else {
       		incorrect++;}
+      	console.log(guess) 
+      	console.log(correct)
+      	console.log(incorrect)
         })
   
 $(".choice2").on("click", function() {    
@@ -103,7 +109,7 @@ function stop() {
 }
 
 })
-// // funtion between(){}
+
 
 
 
